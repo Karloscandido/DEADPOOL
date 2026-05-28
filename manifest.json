@@ -1,11 +1,11 @@
 {
-  "name": "DEADPOOL",
-  "short_name": "DEADPOOL",
-  "description": "Aplicativo de Transmissões DEADPOOL",
+  "name": "LucSons Team",
+  "short_name": "LucSons Team",
+  "description": "Scanner Avançado LucSons Team",
   "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#800080",
+  "background_color": "#120202",
+  "theme_color": "#ff3c00",
   "orientation": "portrait",
   "icons": [
     {
